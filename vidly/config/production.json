@@ -1,0 +1,6 @@
+{
+    "name":"production genre app",
+    "mail":{
+        "host":"production mail host"
+    }
+}
