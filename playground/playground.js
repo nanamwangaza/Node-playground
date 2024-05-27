@@ -36,18 +36,21 @@ async function getCourses(){
     console.log(courses)
  }
 
- getCourses()
- 
-//  async function updateCourse(id){
-//     const course = await Course.findById(id);
-//     if(!course) return;
-//     course.author="Another author";
-//     course.isPublished=true;  
-       
-   
-//     const result = await course.save();
-//     console.log(result);
-//  }
 
-//  updateCourse('5a68fdd7bee8ea64649c2777');
+ 
+ async function updateCourse(id){
+    const course = await Course.findById(id);
+    course.author="Nana";
+    
+    console.log(course);
+   
+ }
+
+ updateCourse('5a68fdd7bee8ea64649c2777')
+
+// async function removeCourse(id){
+//   const result =  await Course.find({_id:id})
+//   console.log(result);
+// }
+// removeCourse('5a68fdc3615eda645bc6bdec')
 
