@@ -55,10 +55,9 @@ const genre = await Genre.findByIdAndUpdate(req.params.id, {name:req.body.name},
 })
 
 router.delete("/:id", async(req,res)=>{
-const genre = await Genres.findByIdAndRemove(req.params.id);
+const genre = await Genre.findByIdAndDelete(req.params.id);
  if(!genre) return res.status(404).send('genre not found')
   res.send(genre)
 })
-
 
 module.exports = router;
