@@ -3,6 +3,7 @@ const router = express.Router();
 const {Movie, validateMovie} = require("../models/movie");
 const {Genre} = require("../models/genre");
 
+
 router.post("/",async(req, res)=>{
     const {error} = validateMovie(req.body);
     if(error) res.status(400).send("Bad request");
